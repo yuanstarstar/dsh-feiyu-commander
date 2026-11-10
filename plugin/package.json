@@ -1,0 +1,33 @@
+{
+    "name": "@local/dsh-feiyu-commander",
+    "version": "1.2.0",
+    "private": true,
+    "type": "module",
+    "description": "肥鱼指挥官（纯会话版）：只听队友/主人语音、读屏幕，指挥由当前 DSH 会话里的大模型直接做；不含后台 python 导演。",
+    "main": "./host.js",
+    "exports": {
+        ".": "./host.js",
+        "./client": "./client.js",
+        "./package.json": "./package.json"
+    },
+    "files": [
+        "host.js",
+        "client.js",
+        "cordis.patch.yml",
+        "README.md"
+    ],
+    "dsh": {
+        "bundle": {
+            "patch": "./cordis.patch.yml"
+        },
+        "client": {
+            "platform": "web",
+            "immediately": true,
+            "inject": [
+                "@deepseek-ai/dsh-client-runtime",
+                "@deepseek-ai/dsh-client-ui-settings",
+                "@deepseek-ai/dsh-client-ui-settings-plugins"
+            ]
+        }
+    }
+}

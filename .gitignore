@@ -1,0 +1,14 @@
+# 运行时与本机数据（不会上传）
+.venv/
+pylibs/
+models/
+_capture/
+tmp/
+__pycache__/
+*.pyc
+*.log
+voice.json
+credential*.json
+*.zip
+node_modules/
+dist/

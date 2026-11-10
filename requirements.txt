@@ -1,0 +1,4 @@
+numpy>=1.26,<3
+sherpa-onnx==2.0.0
+soundcard==0.4.6
+comtypes==1.4.9
